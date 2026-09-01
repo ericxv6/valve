@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Fitness Blog</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-bottom: 25px;
+        }
+
+        header h1 {
+            font-size: 38px;
+            color: #ff4d4d;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        article {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        article h2 {
+            color: #e63946;
+            font-size: 28px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        article h3 {
+            color: #333;
+            font-size: 22px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        article p {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        article ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        article li {
+            margin-bottom: 8px;
+        }
+
+        .blog-image {
+            display: block;
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            margin: 20px auto;
+            border: 4px solid #e63946;
+            border-radius: 10px;
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-section {
+            background-color: #ffe5e5;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            border: 2px solid #ff9999;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-section h2 {
+            color: #c1121f;
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        form {
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            font-size: 17px;
+            font-weight: bold;
+            margin-bottom: 7px;
+            margin-top: 15px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            background-color: white;
+            margin-bottom: 10px;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #e63946;
+            outline: none;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            margin-top: 15px;
+            background-color: #e63946;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #a4161a;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 30px;
+            }
+
+            article h2,
+            .form-section h2 {
+                font-size: 24px;
+            }
+
+            article p,
+            article ul {
+                font-size: 16px;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            article,
+            .form-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Fitness Blog</h1>
+        <p>Train Hard, Stay Healthy, Never Give Up</p>
+    </header>
+
+    <div class="container">
+
+        <article>
+            <h2>Why Going to the Gym Is Important</h2>
+
+            <img
+                class="blog-image"
+                src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1000&q=80"
+                alt="People working out in a gym"
+            >
+
+            <p>
+                Going to the gym is one of the best ways to improve your
+                physical health and build a stronger body. Regular exercise
+                can help improve strength, endurance, confidence, and overall fitness.
+            </p>
+
+            <p>
+                The gym is not only about building muscles. It can also help
+                develop discipline and create healthy habits that can be useful
+                in everyday life.
+            </p>
+
+            <h3>Benefits of Regular Exercise</h3>
+
+            <ul>
+                <li>Improves muscle strength</li>
+                <li>Helps maintain a healthy weight</li>
+                <li>Improves heart and lung health</li>
+                <li>Reduces stress</li>
+                <li>Builds confidence and discipline</li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>My Favorite Workout Routine</h2>
+
+            <img
+                class="blog-image"
+                src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1000&q=80"
+                alt="Person doing a workout"
+            >
+
+            <p>
+                My favorite workout routine combines strength training and
+                proper rest. A consistent routine makes it easier to improve
+                performance and reach fitness goals.
+            </p>
+
+            <h3>Example Weekly Workout</h3>
+
+            <ul>
+                <li>Monday - Push Workout</li>
+                <li>Tuesday - Pull Workout</li>
+                <li>Wednesday - Rest</li>
+                <li>Thursday - Leg Workout</li>
+                <li>Friday - Upper Body</li>
+                <li>Saturday - Cardio</li>
+                <li>Sunday - Rest</li>
+            </ul>
+
+            <p>
+                The most important thing is consistency. Progress takes time,
+                so it is better to focus on improving little by little instead
+                of expecting immediate results.
+            </p>
+        </article>
+
+        <section class="form-section">
+            <h2>Give Your Feedback</h2>
+
+            <form>
+                <label for="name">Full Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+                <label for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+                <label for="rating">How do you rate this blog?</label>
+                <select id="rating" name="rating">
+                    <option value="">Select a rating</option>
+                    <option value="5">Excellent - 5 Stars</option>
+                    <option value="4">Good - 4 Stars</option>
+                    <option value="3">Average - 3 Stars</option>
+                    <option value="2">Poor - 2 Stars</option>
+                    <option value="1">Very Poor - 1 Star</option>
+                </select>
+
+                <label for="message">Your Feedback</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Write your feedback here..."
+                    required
+                ></textarea>
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 My Fitness Blog | Stay Strong and Healthy</p>
+    </footer>
+
+</body>
+</html>
