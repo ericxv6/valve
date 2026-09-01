@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Laid Fitness Blog</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #111;
+            color: white;
+            padding: 20px 8%;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff3333;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #ff3333;
+        }
+
+        .hero {
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+                url("https://www.greatestphysiques.com/wp-content/uploads/2017/10/David-Laid.06.jpg");
+            background-size: cover;
+            background-position: center;
+            min-height: 380px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 30px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            color: #ff3333;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 30px auto;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+        }
+
+        .blog {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog h2 {
+            color: #e63946;
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .date {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .author {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .blog p {
+            font-size: 18px;
+            margin-bottom: 18px;
+        }
+
+        .blog h3 {
+            color: #222;
+            font-size: 24px;
+            margin: 20px 0 10px;
+        }
+
+        .blog ul {
+            margin-left: 25px;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .blog li {
+            margin-bottom: 8px;
+        }
+
+        .blog-image {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border: 4px solid #e63946;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+        }
+
+        .sidebar {
+            background-color: #222;
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            height: fit-content;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .sidebar h2 {
+            color: #ff3333;
+            margin-bottom: 15px;
+        }
+
+        .sidebar h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            margin-bottom: 12px;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #ff3333;
+        }
+
+        footer {
+            background-color: #111;
+            color: white;
+            margin-top: 40px;
+            padding: 40px 8%;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-info h2 {
+            color: #ff3333;
+            margin-bottom: 15px;
+        }
+
+        .footer-info p {
+            font-size: 17px;
+            margin-bottom: 10px;
+        }
+
+        .feedback-form {
+            background-color: #2b2b2b;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .feedback-form h2 {
+            color: #ff3333;
+            margin-bottom: 20px;
+        }
+
+        .feedback-form label {
+            display: block;
+            margin: 12px 0 6px;
+            font-weight: bold;
+        }
+
+        .feedback-form input,
+        .feedback-form select,
+        .feedback-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #555;
+            border-radius: 6px;
+            background-color: #111;
+            color: white;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .feedback-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .feedback-form input:hover,
+        .feedback-form select:hover,
+        .feedback-form textarea:hover {
+            border-color: #ff3333;
+        }
+
+        .feedback-form input:focus,
+        .feedback-form select:focus,
+        .feedback-form textarea:focus {
+            outline: none;
+            border-color: #ff3333;
+            box-shadow: 0 0 6px rgba(255, 51, 51, 0.5);
+        }
+
+        .feedback-form button {
+            width: 100%;
+            padding: 13px;
+            margin-top: 18px;
+            border: none;
+            border-radius: 6px;
+            background-color: #e63946;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .feedback-form button:hover {
+            background-color: #a4161a;
+            transform: translateY(-2px);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #555;
+            font-size: 14px;
+        }
+
+        @media (max-width: 800px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .sidebar {
+                display: none;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            .hero {
+                min-height: 300px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .blog {
+                padding: 18px;
+            }
+
+            .blog h2 {
+                font-size: 26px;
+            }
+
+            .blog p,
+            .blog ul {
+                font-size: 16px;
+            }
+
+            footer {
+                padding: 30px 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+
+            <div class="logo">DAVID LAID</div>
+
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#workout">Workout</a></li>
+                    <li><a href="#contact">Feedback</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div>
+            <h1>David Laid Fitness</h1>
+            <p>Strength, Discipline, Consistency, and Progress</p>
+        </div>
+    </section>
+
+    <main class="container">
+
+        <div class="content-grid">
+
+            <section class="blog" id="blog">
+
+                <h2>David Laid: Fitness Inspiration</h2>
+
+                <p class="date">September 1, 2026</p>
+
+                <p class="author">Written by: Fitness Blog</p>
+
+                <img
+                    class="blog-image"
+                    src="https://workoutroutinediet.com/wp-content/uploads/2023/10/david.png"
+                    alt="David Laid during a gym workout"
+                >
+
+                <p>
+                    David Laid is widely known in the fitness community for
+                    his impressive physique, strength training, and dedication
+                    to bodybuilding. His transformation and training journey
+                    have inspired many people to become more consistent with
+                    their own fitness goals.
+                </p>
+
+                <p>
+                    His training style combines bodybuilding exercises with
+                    heavy strength movements. This approach is often described
+                    as powerbuilding because it focuses on both gaining muscle
+                    and becoming stronger.
+                </p>
+
+                <h3 id="workout">David Laid Workout Style</h3>
+
+                <ul>
+                    <li>Heavy compound exercises</li>
+                    <li>Progressive overload</li>
+                    <li>Chest, shoulders, and triceps training</li>
+                    <li>Back and biceps training</li>
+                    <li>Leg and lower-body workouts</li>
+                    <li>Consistent hypertrophy training</li>
+                </ul>
+
+                <img
+                    class="blog-image"
+                    src="https://www.greatestphysiques.com/wp-content/uploads/2017/10/David-Laid.06.jpg"
+                    alt="David Laid performing a strength workout"
+                >
+
+                <h3>Keys to Building a Great Physique</h3>
+
+                <p>
+                    Building a strong physique requires patience and
+                    consistency. Training hard is important, but proper rest,
+                    nutrition, and recovery are also necessary for long-term
+                    progress.
+                </p>
+
+                <p>
+                    One important lesson from David Laid's journey is that
+                    progress does not happen overnight. Staying disciplined
+                    and continuing to improve can help you get closer to your
+                    fitness goals.
+                </p>
+
+            </section>
+
+            <aside class="sidebar">
+
+                <h2>Fitness Corner</h2>
+
+                <h3>Recent Posts</h3>
+
+                <ul>
+                    <li><a href="#">David Laid Workout Routine</a></li>
+                    <li><a href="#">Powerbuilding Explained</a></li>
+                    <li><a href="#">How to Build Muscle</a></li>
+                    <li><a href="#">Progressive Overload</a></li>
+                    <li><a href="#">Importance of Recovery</a></li>
+                </ul>
+
+                <h3>Quick Links</h3>
+
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#blog">Fitness Blog</a></li>
+                    <li><a href="#workout">Workout</a></li>
+                    <li><a href="#contact">Feedback</a></li>
+                </ul>
+
+                <h3>Daily Motivation</h3>
+
+                <p>
+                    Stay consistent, train with purpose, and focus on becoming
+                    better every day.
+                </p>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+    <footer id="contact">
+
+        <div class="footer-grid">
+
+            <div class="footer-info">
+                <h2>About This Blog</h2>
+
+                <p>
+                    This website is a simple fitness blog inspired by David
+                    Laid's training journey and powerbuilding style.
+                </p>
+
+                <p>
+                    Train hard. Stay disciplined. Keep progressing.
+                </p>
+            </div>
+
+            <div class="feedback-form">
+
+                <h2>Feedback Form</h2>
+
+                <form>
+
+                    <label for="name">Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                    <label for="email">Email</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                    <label for="rating">Rating</label>
+
+                    <select id="rating" name="rating" required>
+                        <option value="">Select a rating</option>
+                        <option value="5">5 - Excellent</option>
+                        <option value="4">4 - Very Good</option>
+                        <option value="3">3 - Good</option>
+                        <option value="2">2 - Poor</option>
+                        <option value="1">1 - Very Poor</option>
+                    </select>
+
+                    <label for="message">Feedback</label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Write your feedback here..."
+                        required
+                    ></textarea>
+
+                    <button type="submit">Submit Feedback</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            &copy; 2026 David Laid Fitness Blog. All Rights Reserved.
+        </div>
+
+    </footer>
+
+</body>
+</html>
