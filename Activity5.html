@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IronFit Gym</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(139, 36, 36);
+            color: #1e0909;
+        }
+
+        header {
+            background-color: #111;
+            color: rgb(200, 121, 121);
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 25px auto;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #ce6666;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .card h2 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        .card p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .card img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .sidebar {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #c25e5e;
+            border-radius: 10px;
+        }
+
+        .sidebar h2 {
+            margin-top: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #111;
+            color: rgb(216, 130, 130);
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+
+        @media (max-width: 600px) {
+
+            body {
+                background-color: #c56060;
+            }
+
+            header {
+                padding: 25px 10px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            header p {
+                font-size: 14px;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            .card {
+                padding: 15px;
+            }
+
+            .card h2 {
+                font-size: 20px;
+            }
+
+            .card p {
+                font-size: 14px;
+            }
+
+            .sidebar {
+                display: none;
+            }
+        }
+
+
+        @media (min-width: 601px) and (max-width: 900px) {
+
+            .content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .sidebar {
+                display: block;
+            }
+
+            header h1 {
+                font-size: 32px;
+            }
+        }
+
+        /* Desktop */
+        @media (min-width: 901px) {
+
+            .container {
+                display: grid;
+                grid-template-columns: 3fr 1fr;
+                gap: 25px;
+            }
+
+            .content {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .sidebar {
+                margin-top: 0;
+            }
+
+            header h1 {
+                font-size: 42px;
+            }
+
+            .card h2 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>IRONFIT GYM</h1>
+        <p>Train Hard. Stay Strong. Be Better.</p>
+    </header>
+
+    <div class="container">
+
+        <main class="content">
+
+            <div class="card">
+                <h2>Strength Training</h2>
+
+                <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80"
+                     alt="Strength Training">
+
+                <p>
+                    Build strength and muscle with exercises such as
+                    squats, bench press, deadlifts, and other weight
+                    training exercises.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Cardio Workout</h2>
+
+                <img src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&w=800&q=80"
+                     alt="Cardio Workout">
+
+                <p>
+                    Improve your endurance and cardiovascular fitness
+                    through running, cycling, walking, and other cardio
+                    exercises.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>Workout Plan</h2>
+
+                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80"
+                     alt="Workout Plan">
+
+                <p>
+                    Follow a consistent workout routine and focus on
+                    proper form, progressive training, and recovery.
+                </p>
+            </div>
+
+        </main>
+
+        <aside class="sidebar">
+
+            <h2>Gym Activities</h2>
+
+            <ul>
+                <li>Weight Training</li>
+                <li>Cardio</li>
+                <li>Strength Training</li>
+                <li>Stretching</li>
+                <li>Bodybuilding</li>
+            </ul>
+
+            <h2>Gym Schedule</h2>
+
+            <p>Monday - Friday</p>
+            <p>6:00 AM - 10:00 PM</p>
+
+        </aside>
+
+    </div>
+
+    <footer>
+        <p>IRONFIT GYM &copy; 2026</p>
+    </footer>
+
+</body>
+</html>
