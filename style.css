@@ -1,11 +1,61 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
+font-family: Arial;
+margin: 0;
+background-image: url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48");
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+color: white;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: white;
-    color: black;
+.container {
+width: 80%;
+margin: 50px auto;
+}
+
+.card {
+background: rgba(0, 0, 0, 0.85);
+padding: 25px;
+margin: 20px;
+border-radius: 10px;
+}
+
+h1, h2 {
+color: #ff3333;
+}
+
+h1 {
+text-align: center;
+}
+
+input, textarea, select {
+width: 100%;
+padding: 10px;
+margin: 8px 0 15px;
+box-sizing: border-box;
+border: none;
+border-radius: 5px;
+}
+
+textarea {
+height: 120px;
+resize: vertical;
+}
+
+button {
+background: #ff3333;
+color: white;
+padding: 12px 25px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 16px;
+}
+
+button:hover {
+background: #cc0000;
+}
+
+label {
+font-weight: bold;
 }

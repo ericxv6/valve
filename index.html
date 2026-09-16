@@ -1,11 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gym Feedback</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+<div class="container">
+
+<div class="card">
+    <h1>GYM FEEDBACK</h1>
+    <p style="text-align: center;">
+        Share your experience and help us improve our gym.
+    </p>
+</div>
+
+<div class="card">
+    <h2>Feedback Form</h2>
+
+    <form>
+
+        <label>Name:</label>
+        <input type="text" placeholder="Enter your name">
+
+        <label>Email:</label>
+        <input type="email" placeholder="Enter your email">
+
+        <label>Age:</label>
+        <input type="number" placeholder="Enter your age">
+
+        <label>How often do you visit the gym?</label>
+        <select>
+            <option>Everyday</option>
+            <option>3-5 times a week</option>
+            <option>1-2 times a week</option>
+            <option>Occasionally</option>
+        </select>
+
+        <label>What type of workout do you usually do?</label>
+        <select>
+            <option>Weight Training</option>
+            <option>Cardio</option>
+            <option>Bodybuilding</option>
+            <option>CrossFit</option>
+            <option>Calisthenics</option>
+            <option>Mixed Workout</option>
+        </select>
+
+        <label>Gym Equipment:</label>
+        <select>
+            <option>Excellent</option>
+            <option>Good</option>
+            <option>Average</option>
+            <option>Poor</option>
+        </select>
+
+        <label>Gym Cleanliness:</label>
+        <select>
+            <option>Very Clean</option>
+            <option>Clean</option>
+            <option>Average</option>
+            <option>Needs Improvement</option>
+        </select>
+
+        <label>Staff Service:</label>
+        <select>
+            <option>Excellent</option>
+            <option>Good</option>
+            <option>Average</option>
+            <option>Poor</option>
+        </select>
+
+        <label>Gym Environment:</label>
+        <select>
+            <option>Very Comfortable</option>
+            <option>Comfortable</option>
+            <option>Average</option>
+            <option>Uncomfortable</option>
+        </select>
+
+        <label>Overall Rating:</label>
+        <select>
+            <option>★★★★★ Excellent</option>
+            <option>★★★★☆ Very Good</option>
+            <option>★★★☆☆ Good</option>
+            <option>★★☆☆☆ Fair</option>
+            <option>★☆☆☆☆ Poor</option>
+        </select>
+
+        <label>What did you like most about the gym?</label>
+        <textarea placeholder="Tell us what you liked..."></textarea>
+
+        <label>What can we improve?</label>
+        <textarea placeholder="Tell us what we can improve..."></textarea>
+
+        <label>Additional Feedback:</label>
+        <textarea placeholder="Write your additional comments..."></textarea>
+
+        <label>Would you recommend our gym?</label>
+        <select>
+            <option>Definitely Yes</option>
+            <option>Maybe</option>
+            <option>No</option>
+        </select>
+
+        <button type="submit">Submit Feedback</button>
+
+    </form>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
