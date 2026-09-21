@@ -5,7 +5,7 @@ background-image: url("https://images.unsplash.com/photo-1534438327276-14e5300c3
 background-size: cover;
 background-position: center;
 background-attachment: fixed;
-color: white;
+color: rgba(255, 255, 255, 0.92);
 }
 
 .container {
